@@ -12,7 +12,7 @@ const chapters=[
  {id:'chapter3',number:'03',name:'A Garden for Everyone',short:'Checking for bias and fairness',pages:chapter3Pages,bridge:'Lily and Pip looked again at the whole garden. They checked their examples, tested helpful actions, and made room for different flowers. The garden was ready for butterflies to visit!',next:'Together, they shared their discoveries at the school science fair.',emoji:'🌼'}
 ];
 function makeSpreads(){
- const result=[cover,{id:'chapter1-spread1',kind:'illustrated',theme:'garden',chapterLabel:'CHAPTER ONE · THE BUTTERFLY MYSTERY',title:'Where Are the Butterflies? · Meet Pip!',imageSrc:'/spread1.jpg',imageAlt:'Two-page illustrated story: Lily notices fewer butterflies this year and asks Pip the robot to help find and count them.'}];
+ const result=[cover,{id:'chapter1-spread1',kind:'illustrated',theme:'garden',chapterLabel:'CHAPTER ONE · THE BUTTERFLY MYSTERY',title:'Where Are the Butterflies? · Meet Pip!',imageSrc:'/download.png',imageAlt:'Two-page illustrated story: Lily notices fewer butterflies this year and asks Pip the robot to help find and count them.'}];
  chapters.forEach(ch=>{
   // Four spreads per chapter for this demo. Existing chapter components are unchanged.
   ch.pages.forEach((page,index)=>result.push({...page,kind:page.id.endsWith('-game')?'game':'story',chapterId:ch.id,chapterNumber:ch.number,chapterName:ch.name,chapterShort:ch.short,isChapterOpening:index===0,spreadKey:page.id}));
