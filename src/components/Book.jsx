@@ -92,7 +92,7 @@ export default function Book({spreads,onComplete}){
    <button type="button" className="book-corner book-corner-prev" aria-label="Turn to previous page" onClick={()=>go(-1)} disabled={position===0||!!turn}><span>↶</span></button>
    <button type="button" className="book-corner book-corner-next" aria-label="Turn to next page" onClick={()=>go(1)} disabled={position>=maxPosition-1||!!turn}><span>↷</span></button>
    </div></div>
-  <div className="reader-bottom"><span>{active.kind==='cover'?'THE STORY BEGINS':active.kind==='ending'?'THE END':active.chapterLabel}</span><span>{isMobile?'PAGE':'SPREAD'} {position+1} / {maxPosition}</span></div>
+  <div className="reader-bottom"><span>{active.id==='cover'?'THE STORY BEGINS':active.kind==='ending'?'THE END':active.chapterLabel}</span><span>{isMobile?'PAGE':'SPREAD'} {position+1} / {maxPosition}</span></div>
   <p className="navigation-hint">Turn the page by tapping a corner or swiping. Use ← → keys on a keyboard. Games stay where you left them during this reading.</p>
  </section>;
 }
